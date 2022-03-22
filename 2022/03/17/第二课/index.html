@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="用户和用户组的关系  一对一∶一个用户可以存在一个组中，是组中的唯一成员 一对多：一个用户可以存在多个用户组中，此用户具有多个组的共同权限 多对一：多个用户可以存放在一个组中，这些用户具有和组相同的权限 多对多：多个用户可以存在多个组中，即以上3种关系的扩展  相关文件的配置&#x2F;etc&#x2F;group 存储当前系统中所有用户组信息该文件内容的每一行代表一个用户组，每个用户组信息格式固">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2022/03/17/%E7%AC%AC%E4%BA%8C%E8%AF%BE/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="用户和用户组的关系  一对一∶一个用户可以存在一个组中，是组中的唯一成员 一对多：一个用户可以存在多个用户组中，此用户具有多个组的共同权限 多对一：多个用户可以存放在一个组中，这些用户具有和组相同的权限 多对多：多个用户可以存在多个组中，即以上3种关系的扩展  相关文件的配置&#x2F;etc&#x2F;group 存储当前系统中所有用户组信息该文件内容的每一行代表一个用户组，每个用户组信息格式固">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/26310272/1646127699481-5f4760be-4e50-4a3c-8074-207251b36d1f.png#clientId=u2f3d0cae-5836-4&crop=0&crop=0&crop=1&crop=1&from=drop&id=udacef251&margin=%5Bobject%20Object%5D&name=QQ%E5%9B%BE%E7%89%8720220301174130.png&originHeight=440&originWidth=1454&originalType=binary&ratio=1&rotation=0&showTitle=false&size=795754&status=done&style=none&taskId=u47f47eef-3791-4447-95fe-49d07ffd154&title=">
+<meta property="article:published_time" content="2022-03-17T11:59:11.374Z">
+<meta property="article:modified_time" content="2022-03-17T11:59:15.863Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/26310272/1646127699481-5f4760be-4e50-4a3c-8074-207251b36d1f.png#clientId=u2f3d0cae-5836-4&crop=0&crop=0&crop=1&crop=1&from=drop&id=udacef251&margin=%5Bobject%20Object%5D&name=QQ%E5%9B%BE%E7%89%8720220301174130.png&originHeight=440&originWidth=1454&originalType=binary&ratio=1&rotation=0&showTitle=false&size=795754&status=done&style=none&taskId=u47f47eef-3791-4447-95fe-49d07ffd154&title=">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-第二课" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/03/17/%E7%AC%AC%E4%BA%8C%E8%AF%BE/" class="article-date">
+  <time class="dt-published" datetime="2022-03-17T11:59:11.374Z" itemprop="datePublished">2022-03-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><strong>用户和用户组的关系</strong></p>
+<ol>
+<li>一对一∶一个用户可以存在一个组中，是组中的<br>唯一成员</li>
+<li>一对多：一个用户可以存在多个用户组中，此用户具有多个组的共同权限</li>
+<li>多对一：多个用户可以存放在一个组中，这些用户具有和组相同的权限</li>
+<li>多对多：多个用户可以存在多个组中，即以上3种关系的扩展</li>
+</ol>
+<p><strong>相关文件的配置</strong><br>&#x2F;etc&#x2F;group 存储当前系统中所有用户组信息<br>该文件内容的每一行代表一个用户组，每个用户组信息格式固定</p>
+<p><strong>文件权限</strong><br>文件权限分别为：读(read)，写(write)，执x(execute)，简写即为(r.w.x)，也可以可用数字来 (4,2,1) 表示，-即无权限</p>
+<p>每个文件针对每类访问者定义了三种主要权限，其中，第一位：代表文件类型，后面每3位代表一组权限，分别是：所有者、所属组和其他人<br>文件类型<br>所有者权限<br>属组权限<br>其他用户权限<br>r–&gt;读<br>W–&gt;写<br>x –&gt; 执行<br><strong>注：</strong><br>1.root账户不受文件权限的读写限制，执行权限受限制<br>2.用户获取文件权限的顺序：先看是否为所有者，如果是，则后面权限不看；再看是否为所属组，如果是，则后面权限不看<br>3.缺省创建的文件不可授予可执行的权限，基于最基本的安全机制，防止病毒等</p>
+<p>第一个字段（root）：用户组的组名<br>第二个字段（x）：加密后的用户组密码<br>第三个字段（0）：用户组ID，GID<br>第四个字段（空值）：用户组的成员列表，多个组成员用逗号分隔<br>用户和用户组的概念<br>用户 ——&gt;使用操作系统的人<br>Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统每个用户账号都拥有一个唯一的用户名和各自的口令</p>
+<p><strong>相关文件的配置</strong><br>&#x2F;etc&#x2F;passwd 存储当前系统中所有用户的信息（密码除外）<br>该文件内容的每一行代表一个用户的配置信息，每个用户信息格式固定</p>
+<p>第一个字段（第一个root）：用户名<br>第二个字段（x）：加密的密码<br>第三个字段（第一个0）：用户ID<br>第四个字段（第二个0）：用户组ID<br>第五个字段（第二个root）：用户的描述信息，默认用户的全名或空值<br>第六个字段（&#x2F;root）：用户的主目录<br>第七个字段（&#x2F;bin&#x2F;bash）：登录shell，字段&#x2F;sbin&#x2F;nologin表示禁止登录<br>显示、设置文件的默认权限<img src="https://cdn.nlark.com/yuque/0/2022/png/26310272/1646127699481-5f4760be-4e50-4a3c-8074-207251b36d1f.png#clientId=u2f3d0cae-5836-4&crop=0&crop=0&crop=1&crop=1&from=drop&id=udacef251&margin=%5Bobject%20Object%5D&name=QQ%E5%9B%BE%E7%89%8720220301174130.png&originHeight=440&originWidth=1454&originalType=binary&ratio=1&rotation=0&showTitle=false&size=795754&status=done&style=none&taskId=u47f47eef-3791-4447-95fe-49d07ffd154&title=" alt="QQ图片20220301174130.png"><br>[root@localhost ~]# umask [-S] #显示、设置文件的默认权限<br>参数说明： -S 以 rwx 形式显示新建文件的默认权限<br>命令说明：<br>对于windows而言，默认权限是从上级目录继承而来的，而linux则是通过umask权限设定的<br>如果用户建立文件，默认是没有可执行权限的，即权限表示为 -rw-rw-rw-，即666<br>如果用户建立目录，默认权限是全开放的，即权限表示drwxrwxrwx，即777<br>umask的值，默认为022，就是需要减掉的权限</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/03/17/%E7%AC%AC%E4%BA%8C%E8%AF%BE/" data-id="cl11jhgft0002yse32myygd57" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/03/17/%E7%AC%AC%E4%B8%80%E8%AF%BE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/03/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/03/17/%E7%AC%AC%E4%B8%80%E8%AF%BE/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/17/%E7%AC%AC%E4%BA%8C%E8%AF%BE/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/13/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
