@@ -6,15 +6,15 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="操作系统分类：类Unix：Linux，Mac OS等Windows：Windows PC，Windows Server等Windows PC常见的有XP、Win7、Win10Windows Server主要用于搭建服务器 操作系统功能：进程管理：进程调度、进程分配、进程回收存储管理：存储分配、存储共享、存储保护、存储扩张设备管理：设备分配、设备传输控制、设备独立性文件管理：文件存储空间管理、目录管">
+  <meta name="description" content="一、判断普通文件和目录  is_file(); 判断给定的文件名是否为一个正常的文件 is_dir(); 判断给定的文件名是否为一个目录  二、文件的属性1.file_exists(); 检查文件或目录是否存在2.filesize(); 取得普通文件的大小3.is_readable(); 判断给定的文件名是否可读4.is_writable(); 判断给定的文件名是否可写5.filectime();">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2022/03/17/%E7%AC%AC%E4%B8%80%E8%AF%BE/index.html">
+<meta property="og:url" content="http://example.com/2022/03/24/%E7%AC%AC%E5%9B%9B%E8%AF%BE%20%20PHP%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="操作系统分类：类Unix：Linux，Mac OS等Windows：Windows PC，Windows Server等Windows PC常见的有XP、Win7、Win10Windows Server主要用于搭建服务器 操作系统功能：进程管理：进程调度、进程分配、进程回收存储管理：存储分配、存储共享、存储保护、存储扩张设备管理：设备分配、设备传输控制、设备独立性文件管理：文件存储空间管理、目录管">
+<meta property="og:description" content="一、判断普通文件和目录  is_file(); 判断给定的文件名是否为一个正常的文件 is_dir(); 判断给定的文件名是否为一个目录  二、文件的属性1.file_exists(); 检查文件或目录是否存在2.filesize(); 取得普通文件的大小3.is_readable(); 判断给定的文件名是否可读4.is_writable(); 判断给定的文件名是否可写5.filectime();">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-17T12:00:21.971Z">
-<meta property="article:modified_time" content="2022-03-17T12:00:24.166Z">
+<meta property="article:published_time" content="2022-03-24T12:57:32.248Z">
+<meta property="article:modified_time" content="2022-03-24T12:57:34.651Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -73,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-第一课" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-第四课  PHP操作指令" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/03/17/%E7%AC%AC%E4%B8%80%E8%AF%BE/" class="article-date">
-  <time class="dt-published" datetime="2022-03-17T12:00:21.971Z" itemprop="datePublished">2022-03-17</time>
+    <a href="/2022/03/24/%E7%AC%AC%E5%9B%9B%E8%AF%BE%20%20PHP%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/" class="article-date">
+  <time class="dt-published" datetime="2022-03-24T12:57:32.248Z" itemprop="datePublished">2022-03-24</time>
 </a>
     
   </div>
@@ -85,15 +85,19 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p><strong>操作系统分类：</strong><br>类Unix：Linux，Mac OS等<br>Windows：Windows PC，Windows Server等<br>Windows PC常见的有XP、Win7、Win10<br>Windows Server主要用于搭建服务器</p>
-<p><strong>操作系统功能：</strong><br>进程管理：进程调度、进程分配、进程回收<br>存储管理：存储分配、存储共享、存储保护、存储扩张<br>设备管理：设备分配、设备传输控制、设备独立性<br>文件管理：文件存储空间管理、目录管理、文件操作管理、文件保护<br>作业管理是负责处理用户提交的任何要求</p>
-<p><strong>网络安全法</strong><br>《中华人民共和国密码法》<br>《中华人民共和国数据安全法》<br>《个人信息保护法》<br>《网络安全法》<br>《中华人民共和国刑法》</p>
-<p><strong>Linux常用命令</strong><br>关机<br>shutdown -h now 关闭系统<br>shutdown -h hours:minutes &amp; 按预定时间关闭系统<br>    shutdown -c 取消按预定时间关闭系统<br>    shutdown -r now 重启<br>    reboot 重启<br>    logout 注销<br>文件和目录<br>    cd &#x2F;home 进入 ‘&#x2F; home’ 目录’<br>    cd .. 返回上一级目录<br>    cd ..&#x2F;.. 返回上两级目录<br>    cd 进入个人的主目录<br>    cd ~user1 进入个人的主目录<br>    cd - 返回上次所在的目录<br>    pwd 显示工作路径<br>    ls 查看目录中的文件<br>    ls -F 查看目录中的文件<br>    ls -l 显示文件和目录的详细资料<br>    ls -a 显示隐藏文件<br>mkdir dir1 创建一个叫做 ‘dir1’ 的目录’<br>    mkdir dir1 dir2 同时创建两个目录<br>    mkdir -p &#x2F;tmp&#x2F;dir1&#x2F;dir2 创建一个目录树<br>    rm -f file1 删除一个叫做 ‘file1’ 的文件’<br>    rmdir dir1 删除一个叫做 ‘dir1’ 的目录’<br>    rm -rf dir1 删除一个叫做 ‘dir1’ 的目录并同时删除其内容<br>    rm -rf dir1 dir2 同时删除两个目录及它们的内容<br>    mv dir1 new_dir 重命名&#x2F;移动 一个目录<br>    cp file1 file2 复制一个文件<br>    cp dir&#x2F;* . 复制一个目录下的所有文件到当前工作目录<br>    cp -a &#x2F;tmp&#x2F;dir1 . 复制一个目录到当前工作目录<br>    cp -a dir1 dir2 复制一个目录<br>文件搜索<br>    find &#x2F; -name file1 从 ‘&#x2F;‘ 开始进入根文件系统搜索文件和目录<br>    find &#x2F; -user user1 搜索属于用户 ‘user1’ 的文件和目录<br>    find &#x2F;home&#x2F;user1 -name *.bin 在目录 ‘&#x2F; home&#x2F;user1’ 中搜索带有’.bin’ 结尾的文件 </p>
+        <p>一、判断普通文件和目录</p>
+<ol>
+<li>is_file(); 判断给定的文件名是否为一个正常的文件</li>
+<li>is_dir(); 判断给定的文件名是否为一个目录</li>
+</ol>
+<p>二、文件的属性<br>1.file_exists(); 检查文件或目录是否存在<br>2.filesize(); 取得普通文件的大小<br>3.is_readable(); 判断给定的文件名是否可读<br>4.is_writable(); 判断给定的文件名是否可写<br>5.filectime(); 获取文件的创建时间<br>6.filetime(); 获取文件的修改时间<br>7.fileatime(); 取得文件上次访问时间<br>8.stat(); 获取文件大部分属性值</p>
+<p>三、目录的基本操作<br>1.basename(); 返回路径中的文件名部分<br>2.dirname(); 返回路径中的目录部分<br>3.pathinfo(); 返回文件路径信息<br>4.opendir(); 打开目录句柄<br>5.readdir(); 从目录聚丙种读取条目，返回目录中下一个文件的文件名<br>6.rewinddir(); 倒回目录句柄<br>7.closedir(); 关闭目录句柄<br>8.mkdir(); 新建目录<br>9.scandir(); 列出指定路径中的文件和目录</p>
+<p>四、文件的基本操作<br>1.fopen(); 打开文件或者URL<br>2.fread(); 读取文件<br>3.fgets(); 从文件指针中读取一行<br>4.feof(); 测试文件指针是否到了文件结束的位置<br>5.fwrite(); 写入文件<br>6.rewind(); 到会文件指针的位置<br>7.flock(); 轻便的咨询文件锁定<br>8.ftruncate(); 将文件截断到给定的长度<br>9.fclose(); 关闭一个已打开的文件指针<br>10.file(); 把整个文件读入一个数组中<br>11.copy(); 拷贝文件<br>12.unlink(); 删除文件<br>13.file_get_contents(); 将整个文件读入一个字符串<br>14.file_put_contents(); 将字符串写入文件中<br>15.rename(); 重命名一个文件或目录<br>16.readfile(); 读入一个文件并写入到输出缓冲</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/17/%E7%AC%AC%E4%B8%80%E8%AF%BE/" data-id="cl11jw08r0001foe3d0s6844j" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/03/24/%E7%AC%AC%E5%9B%9B%E8%AF%BE%20%20PHP%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/" data-id="cl15062nv0005i4e362mkbehf" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -103,7 +107,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/03/24/%E7%AC%AC%E4%B8%89%E8%AF%BE%20%20PHP%E8%AE%BF%E9%97%AEMySQL%E6%95%B0%E6%8D%AE%E5%BA%93/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/03/24/%E7%AC%AC%E4%BA%94%E8%AF%BE%20%20MySQL%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -113,7 +117,7 @@
     </a>
   
   
-    <a href="/2022/03/17/%E7%AC%AC%E4%BA%8C%E8%AF%BE/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/03/24/%E7%AC%AC%E4%B8%89%E8%AF%BE%20%20PHP%E8%AE%BF%E9%97%AEMySQL%E6%95%B0%E6%8D%AE%E5%BA%93/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title"></div>
     </a>
