@@ -71,6 +71,120 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-SQL注入练习" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/03/31/SQL%E6%B3%A8%E5%85%A5%E7%BB%83%E4%B9%A0/" class="article-date">
+  <time class="dt-published" datetime="2022-03-31T06:05:22.670Z" itemprop="datePublished">2022-03-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Less4<br>输入单引号，页面无任何变化，<br>输入双引号，页面报错，<br>根据报错信息判断出咱们输入的内容被放到一队双引号和圆括号中，以此为依据开始注入<img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less4.png" alt="less4.png"><br>Less5<br>使用聚合函数进行双注入查询时，会在错误信息中显示一部分错误信息。<br>比如count函数后面如果使用分组语句就会把查询的一部分以错误的形式显示出来。<img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less5.png" alt="less5.png"><br>Less6<br>双引号字符型注入，上一题的单引号改成双引号就可以了,同样是两种方法：时间延迟型的手工盲注、报错型的手工盲注或者sqlmap，再有利用concat()几聚合数。<img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less6.png" alt="less6.png"><br>Less7<br>题目已经提示，use outfile，分析闭合方式，单引号报错，所以闭合方式为单引号，写出php<img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less7.png" alt="less7.png"><br>Less8<br>过程和第五关类似<br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less8-1.png" alt="less8-1.png"><br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less8-2.png" alt="less8-2.png"><br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less8-3.png" alt="less8-3.png"><br>Less9<br>因为输入字符没有回显提示，判断使用sleep函数<br>使用sleep，缓冲很久才出来You are in，说明SQL语句被解析，存在SQL注入，引入if()函数，配合sleep()函数使用<img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less9-1.png" alt="less9-1.png"><br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less9-2.png" alt="less9-2.png"><br>Less10<br>类似第九关，闭合方式改为双引号<img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/LESS10.png" alt="LESS10.png"><br>Less11<br>通过burp抓包<br>使用特殊符号发现服务器出现语法错误<br>直接通过万能密码注入，之后通过uname和union进行注入<br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/LESS11.png" alt="LESS11.png"><br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less11-1.png" alt="less11-1.png"><br>Less12<br>闭合方式为双引号括号”）<br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less12-1.png" alt="less12-1.png"><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less12-2.png" alt="less12-2.png"><br>Less13<br>利用漏洞用单引号括号，发现没有反应，改盲注，类似第五关<br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less13-1.png" alt="less13-1.png"><br>Less14<br>闭合方式变为双引号，类似十三关<br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less14.png" alt="less14.png"><br>Less15<br>尝试通用符号后发现没有反馈，通过sleep函数发现服务器在反应，确定闭合方式为单引号<br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less15-1.png" alt="less15-1.png"><br>Less16<br>将15关的单引号改为双引号<br>Less17<br>尝试特殊符号没有反馈，通过利用报错函数来获取信息，<img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less17-1.png" alt="less17-1.png"><br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less17-2.png" alt="less17-2.png"><br><img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less17-3.png" alt="less17-3.png"><br>Less18<br>输入用户名密码admin返回代理信息<br>通过useragent注入<img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less18.png" alt="less18.png"><br>Less19<br>输入用户名密码显示your refer可知题目换了字段<br>类似十八关<img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less19.png" alt="less19.png"><br>Less20<br>使用admin登陆后发现有cookie<br>发现cookie字段存在注入点<img src="https://raw.githubusercontent.com/OIOIOIOIOIOIOIOIO/zhaopian/main/images4-20/less20-2.png" alt="20-2.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/03/31/SQL%E6%B3%A8%E5%85%A5%E7%BB%83%E4%B9%A0/" data-id="cl1els4se00015ce373kb7qo5" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-SQLMAP常用指令" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/03/31/SQLMAP%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="article-date">
+  <time class="dt-published" datetime="2022-03-31T06:05:10.826Z" itemprop="datePublished">2022-03-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>一、注入六连：</p>
+<ol>
+<li>sqlmap -u  “<a target="_blank" rel="noopener" href="http://www.xx.com/?id=x&quot;">http://www.xx.com?id=x&quot;</a>    查询是否存在注入点</li>
+<li><pre><code>--dbs         检测站点包含哪些数据库
+</code></pre>
+</li>
+<li><pre><code>--current-db    获取当前的数据库名
+</code></pre>
+</li>
+<li><pre><code>--tables -D &quot;db_name&quot;  获取指定数据库中的表名 -D后接指定的数据库名称
+</code></pre>
+</li>
+<li><pre><code>--columns  -T &quot;table_name&quot; -D &quot;db_name&quot;  获取数据库表中的字段
+</code></pre>
+</li>
+<li><pre><code>--dump -C &quot;columns_name&quot; -T &quot;table_name&quot; -D &quot;db_name&quot;  获取字段的数据内容
+</code></pre>
+</li>
+</ol>
+<p>二、COOKIE注入：<br>sqlmap -u “<a target="_blank" rel="noopener" href="http://www.xx.com/?id=x&quot;">http://www.xx.com?id=x&quot;</a> –cookie “cookie” –level 2  cookie注入 后接cookie值</p>
+<p>三、POST注入：<br>（1）目标地址http:&#x2F;&#x2F; <a target="_blank" rel="noopener" href="http://www.xxx.com/">www.xxx.com</a> &#x2F;login.asp<br>（2）打开brup代理。<br>（3）点击表单提交<br>（4）burp获取拦截信息（post）<br>（5）右键保存文件（.txt）到指定目录下<br>（6）运行sqlmap并执行如下命令：<br>用例：sqlmap -r okay.txt  -p  username<br>&#x2F;&#x2F; -r表示加载文件(及步骤（5）保存的路径)，-p指定参数（即拦截的post请求中表单提交的用户名或密码等name参数）<br>（7）自动获取表单：–forms自动获取表单<br>（8）指定参数搜索：–data<br>四、常用指令：</p>
+<ol>
+<li>–purge      重新扫描（–purge 删除原先对该目标扫描的记录）</li>
+<li>–tables      获取表名</li>
+<li><pre><code>--dbs         检测站点包含哪些数据库
+</code></pre>
+</li>
+<li><pre><code>--current-db    获取当前的数据库名
+</code></pre>
+</li>
+<li><pre><code>--current-user  检测当前用户
+</code></pre>
+</li>
+<li>–is-dba   判断站点的当前用户是否为数据库管理员</li>
+<li>–batch      默认确认，不询问你是否输入</li>
+<li>–search  后面跟参数 -D -T -C 搜索列（C），表（T）和或数据库名称（D）</li>
+<li>–threads 10  线程，sqlmap线程最高设置为10</li>
+<li>–level 3<br>sqlmap默认测试所有的GET和POST参数，当–level的值大于等于2的时候也会测试HTTPCookie头 的值，当大于等于3的时候也会测试User-Agent和HTTP Referer头的值。最高为5</li>
+<li>–risk 3<br>执行测试的风险（0-3，默认为1）risk越高，越慢但是越安全</li>
+<li><pre><code>-v   详细的等级(0-6)
+  0：只显示Python的回溯，错误和关键消息。
+  1：显示信息和警告消息。
+  2：显示调试消息。
+  3：有效载荷注入。
+  4：显示HTTP请求。
+  5：显示HTTP响应头。
+  6：显示HTTP响应页面的内容
+</code></pre>
+</li>
+<li>–privileges  查看权限</li>
+<li>–tamper xx.py,cc.py   防火墙绕过，后接tamper库中的py文件</li>
+<li>–method “POST” –data “page&#x3D;1&amp;id&#x3D;2”   POST方式提交数据</li>
+<li>–threads number　　采用多线程 后接线程数</li>
+<li>–referer  “”  使用referer欺骗</li>
+<li>–user-agent “”     自定义user-agent</li>
+<li>–proxy “目标地址″   使用代理注入</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/03/31/SQLMAP%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" data-id="cl1els4ot00005ce3dauj5hr6" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-SQL注入" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/03/25/SQL%E6%B3%A8%E5%85%A5/" class="article-date">
@@ -406,99 +520,12 @@
 
 
   
-    <article id="post-第二课" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/03/17/%E7%AC%AC%E4%BA%8C%E8%AF%BE/" class="article-date">
-  <time class="dt-published" datetime="2022-03-17T11:59:11.374Z" itemprop="datePublished">2022-03-17</time>
-</a>
+
+
+  <nav id="page-nav">
     
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><strong>用户和用户组的关系</strong></p>
-<ol>
-<li>一对一∶一个用户可以存在一个组中，是组中的<br>唯一成员</li>
-<li>一对多：一个用户可以存在多个用户组中，此用户具有多个组的共同权限</li>
-<li>多对一：多个用户可以存放在一个组中，这些用户具有和组相同的权限</li>
-<li>多对多：多个用户可以存在多个组中，即以上3种关系的扩展</li>
-</ol>
-<p><strong>相关文件的配置</strong><br>&#x2F;etc&#x2F;group 存储当前系统中所有用户组信息<br>该文件内容的每一行代表一个用户组，每个用户组信息格式固定</p>
-<p><strong>文件权限</strong><br>文件权限分别为：读(read)，写(write)，执x(execute)，简写即为(r.w.x)，也可以可用数字来 (4,2,1) 表示，-即无权限</p>
-<p>每个文件针对每类访问者定义了三种主要权限，其中，第一位：代表文件类型，后面每3位代表一组权限，分别是：所有者、所属组和其他人<br>文件类型<br>所有者权限<br>属组权限<br>其他用户权限<br>r–&gt;读<br>W–&gt;写<br>x –&gt; 执行<br><strong>注：</strong><br>1.root账户不受文件权限的读写限制，执行权限受限制<br>2.用户获取文件权限的顺序：先看是否为所有者，如果是，则后面权限不看；再看是否为所属组，如果是，则后面权限不看<br>3.缺省创建的文件不可授予可执行的权限，基于最基本的安全机制，防止病毒等</p>
-<p>第一个字段（root）：用户组的组名<br>第二个字段（x）：加密后的用户组密码<br>第三个字段（0）：用户组ID，GID<br>第四个字段（空值）：用户组的成员列表，多个组成员用逗号分隔<br>用户和用户组的概念<br>用户 ——&gt;使用操作系统的人<br>Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统每个用户账号都拥有一个唯一的用户名和各自的口令</p>
-<p><strong>相关文件的配置</strong><br>&#x2F;etc&#x2F;passwd 存储当前系统中所有用户的信息（密码除外）<br>该文件内容的每一行代表一个用户的配置信息，每个用户信息格式固定</p>
-<p>第一个字段（第一个root）：用户名<br>第二个字段（x）：加密的密码<br>第三个字段（第一个0）：用户ID<br>第四个字段（第二个0）：用户组ID<br>第五个字段（第二个root）：用户的描述信息，默认用户的全名或空值<br>第六个字段（&#x2F;root）：用户的主目录<br>第七个字段（&#x2F;bin&#x2F;bash）：登录shell，字段&#x2F;sbin&#x2F;nologin表示禁止登录<br>显示、设置文件的默认权限<img src="https://cdn.nlark.com/yuque/0/2022/png/26310272/1646127699481-5f4760be-4e50-4a3c-8074-207251b36d1f.png#clientId=u2f3d0cae-5836-4&crop=0&crop=0&crop=1&crop=1&from=drop&id=udacef251&margin=%5Bobject%20Object%5D&name=QQ%E5%9B%BE%E7%89%8720220301174130.png&originHeight=440&originWidth=1454&originalType=binary&ratio=1&rotation=0&showTitle=false&size=795754&status=done&style=none&taskId=u47f47eef-3791-4447-95fe-49d07ffd154&title=" alt="QQ图片20220301174130.png"><br>[root@localhost ~]# umask [-S] #显示、设置文件的默认权限<br>参数说明： -S 以 rwx 形式显示新建文件的默认权限<br>命令说明：<br>对于windows而言，默认权限是从上级目录继承而来的，而linux则是通过umask权限设定的<br>如果用户建立文件，默认是没有可执行权限的，即权限表示为 -rw-rw-rw-，即666<br>如果用户建立目录，默认权限是全开放的，即权限表示drwxrwxrwx，即777<br>umask的值，默认为022，就是需要减掉的权限</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/17/%E7%AC%AC%E4%BA%8C%E8%AF%BE/" data-id="cl150zmkj000338e339e4e6dl" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/03/13/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-03-13T13:45:28.294Z" itemprop="datePublished">2022-03-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/13/hello-world/" data-id="cl150zmjo000038e355h05eb5" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -529,6 +556,14 @@
       <ul>
         
           <li>
+            <a href="/2022/03/31/SQL%E6%B3%A8%E5%85%A5%E7%BB%83%E4%B9%A0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/31/SQLMAP%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2022/03/25/SQL%E6%B3%A8%E5%85%A5/">(no title)</a>
           </li>
         
@@ -538,14 +573,6 @@
         
           <li>
             <a href="/2022/03/24/%E7%AC%AC%E4%B8%83%E8%AF%BE%20%20Cookie%E4%BD%BF%E7%94%A8%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/24/%E7%AC%AC%E5%85%AD%E8%AF%BE%20%20MySQL%E7%A8%8B%E5%BA%8F%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/24/%E7%AC%AC%E4%BA%94%E8%AF%BE%20%20MySQL%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">(no title)</a>
           </li>
         
       </ul>
